@@ -12,6 +12,9 @@
   "bugs": {
     "url": "https://github.com/HuangZhe007/react-parsed-text/issues"
   },
+  "files": [
+    "src/*"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/HuangZhe007/react-parsed-text"

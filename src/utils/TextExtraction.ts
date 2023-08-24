@@ -1,5 +1,9 @@
+import { ParseShape } from '../types';
+
 class TextExtraction {
-  constructor(text, patterns) {
+  public text: string;
+  public patterns: any;
+  constructor(text: string, patterns?: ParseShape[]) {
     this.text = text;
     this.patterns = patterns || [];
   }
@@ -10,9 +14,9 @@ class TextExtraction {
    * @return {Object[]} - props for all the parts of the text
    */
   parse() {
-    let parsedTexts = [{ children: this.text }];
-    this.patterns.forEach((pattern) => {
-      let newParts = [];
+    let parsedTexts: { children: string; _matched?: boolean }[] = [{ children: this.text }];
+    this.patterns.forEach((pattern: any) => {
+      const newParts: any = [];
 
       const tmp = pattern.nonExhaustiveModeMaxMatchCount || 0;
       const numberOfMatchesPermitted = Math.min(
@@ -81,8 +85,8 @@ class TextExtraction {
    * @param {Integer} index - Index of the matched string in the whole string
    * @return {Object} props for the matched text
    */
-  getMatchedPart(matchedPattern, text, matches, index) {
-    let props = {};
+  getMatchedPart(matchedPattern: any, text: string, matches: string[], index: number) {
+    let props: any = {};
 
     Object.keys(matchedPattern).forEach((key) => {
       if (key === 'pattern' || key === 'renderText' || key === 'nonExhaustiveModeMaxMatchCount') {

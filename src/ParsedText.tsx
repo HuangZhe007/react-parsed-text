@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
 import TextExtraction from './utils/TextExtraction';
 import { ParseShape, ParsedTextProps, TextProps } from './types';
 import { PATTERNS } from './constants';

@@ -1,6 +1,6 @@
 {
   "name": "react-parsed-text",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Parse text and make them into multiple React Text elements",
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
@@ -18,7 +18,7 @@
     "url": "https://github.com/HuangZhe007/react-parsed-text/issues"
   },
   "files": [
-    "src/*"
+    "dist/*"
   ],
   "repository": {
     "type": "git",
